@@ -3,3 +3,5 @@ output "tags" {
   
 }
 
+#module.module.module_name.ouput_name
+

@@ -1,5 +1,4 @@
-output "instance_name" {
-    value = aws_instance.jenkins.instance_type
+output "tags" {
+    value = aws_instance.ec2.tags
 }
-
 
