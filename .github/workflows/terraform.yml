@@ -38,7 +38,7 @@ jobs:
         run: terraform validate
 
       - name: Terraform Plan
-        run: terraform plan -out=tfplan -var-file="input.tfvars"
+        run: terraform plan -var-file="input.tfvars" -out=tfplan
 
     # - name: Manual Approval
     #   uses: trstringer/manual-approval@v1
