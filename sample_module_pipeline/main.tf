@@ -3,6 +3,17 @@ resource "aws_instance" ec2 {
     instance_type = var.instance_type
     tags = var.tags
     region = var.region
+
+    monitoring = true
+
+  metadata_options {
+    http_endpoint = "enabled"
+    http_tokens   = "required"
+  }
+
+  root_block_device {
+    encrypted = true
+  }
     
     }
 
