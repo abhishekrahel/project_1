@@ -1,8 +1,12 @@
 resource "aws_instance" ec2 {
     ami = var.ami
     instance_type = var.instance_type
-    tags = var.tags
+    # tags = var.tags
     region = var.region
+
+    tags = {
+    Name        = "${var.environment}-ec2-server"
+    Environment = var.environment
 
     monitoring = true
 
@@ -16,4 +20,6 @@ resource "aws_instance" ec2 {
   }
     
     }
+
+    
 
