@@ -1,16 +1,18 @@
-resource "aws_instance" ec2 {
+resource "aws_instance" "ec2" {
     ami = var.ami
     instance_type = var.instance_type
     # tags = var.tags
     region = var.region
 
     tags = {
-    Name        = "${var.environment}-ec2-server"
-    Environment = var.environment
+      Name        = "${var.environment}-ec2-server"
+      Environment = var.environment
 
-    monitoring = true
+      
 
     }
+
+      monitoring  = true
 
   metadata_options  {
     http_endpoint = "enabled"
