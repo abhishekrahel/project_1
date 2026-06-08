@@ -33,13 +33,13 @@ jobs:
         run: |
          terraform plan \
            -var="environment=${{ github.event.inputs.environment }}" \
-           -out=tfplan
+           -out=tfplan2
 
       - name: Upload Plan
         uses: actions/upload-artifact@v4
         with:
-          name: tfplan
-          path: tfplan
+          name: tfplan2
+          path: tfplan2
 
   apply:
 
@@ -67,6 +67,6 @@ jobs:
       - name: Download Plan
         uses: actions/download-artifact@v4
         with:
-          name: tfplan
+          name: tfplan2
 
-      - run: terraform apply -auto-approve tfplan
+      - run: terraform apply -auto-approve tfplan2
