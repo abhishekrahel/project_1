@@ -10,7 +10,9 @@ resource "aws_instance" ec2 {
 
     monitoring = true
 
-  metadata_options {
+    }
+
+  metadata_options  {
     http_endpoint = "enabled"
     http_tokens   = "required"
   }
@@ -19,7 +21,7 @@ resource "aws_instance" ec2 {
     encrypted = true
   }
     
-    }
+}
 
     
 
