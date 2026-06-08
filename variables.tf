@@ -1,7 +1,7 @@
 variable "ami" {}
 variable "instance_type" {}
 variable "region" {}
-variable "tags" {}
+#variable "tags" {}
 variable "environment" {
   description = "Deployment environment"
   type        = string
